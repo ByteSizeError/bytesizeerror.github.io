@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>Jimmy Zheng</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <script scr='main.js'></script>
+    <p>Hello, my name is Jimmy! Welcome to my website click on the links below to view my resume and projects. Thank
+        you! :)</p>
+    <p>Last login: <span id="datetime"></span></p>
+    <p>jimmyzheng@Jimmy's-Website ~ % ls</p>
+    <p><a href="resumeJimmyZheng.pdf" target="_blank">Resume</a></p>
+    <p><a href="projects.html">Projects</a></p>
+    <p>jimmyzheng@Jimmy's-Website ~ % cd Projects</p>
+    <p>jimmyzheng@Jimmy's-Website ~ % ls</p>
+    <p><a href="index.html">clear</a></p>
+    <p><a href="https://github.com/p10dibb/TeamMicrosoft423" target="_blank">Microsoft's DCCD Project</a></p>
+    <p><a href="https://github.com/wsu-cpts489-fa20/bp-weather" target="_blank">Weather Book</a></p>
+
+</body>
+
+</html>
+
+<script>
+    var date = new Date();
+    document.getElementById("datetime").innerHTML = date.toLocaleString();
+</script>
