@@ -7,13 +7,31 @@
 </head>
 
 <body onload="typeWriter();">
-    <script scr="typeWriter.js"></script>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
 
+            <ul id="menu">
+                <a href="#"><li>About Me</li></a>
+                <a href="#"><li>Resume</li></a>
+                <a href="#"><li>Projects</li></a>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- <script scr="typeWriter.js"></script> -->
     <p id="intro"></p>
+    <p></p>
     <p>Last login: <span id="datetime"></span></p>
-    <p>jimmyzheng@Jimmy's-Website ~ % ls</p>
-    <p><a href="resumeJimmyZheng.pdf" target="_blank">Resume</a></p>
-    <p><a href="projects.html">Projects</a></p>
+
+    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color:royalblue">~/home</span><span style="color:yellow">$ ls</span></p>
+    <p><a href="aboutMe.html" style="color:royalblue" onmouseover="aboutMe()">About Me/</a></p>
+    <p><a href="resumeJimmyZheng.pdf" target="_blank"  onmouseover="resume()">Resume.pdf</a></p>
+    <p><a href="projects.html" style="color:royalblue" onmouseover="projects()">Projects/</a></p>
+    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color:royalblue">~/home</span><span style="color:yellow">$ cd</span> <span style="color:rgb(255, 255, 255)" id="cd"></span></p>
 </body>
 
 </html>
@@ -23,14 +41,24 @@
     document.getElementById("datetime").innerHTML = date.toLocaleString();
 
     var i = 0;
-    var txt = 'Hello, my name is Jimmy! Welcome to my website click on the links below to view my resume and projects. Thank you! :)'; /* The text */
-    var speed = 50; /* The speed/duration of the effect in milliseconds */
+    var intro = "Hello, my name is Jimmy! Welcome to my website click on the links below to learn more about me. Thank you! :)";
+    var speed = 50; 
 
     function typeWriter() {
-        if (i < txt.length) {
-            document.getElementById("intro").innerHTML += txt.charAt(i);
+        if (i < intro.length) {
+            document.getElementById("intro").innerHTML += intro.charAt(i);
             i++;
             setTimeout(typeWriter, speed);
         }
+    }
+
+    function aboutMe() {
+        document.getElementById("cd").innerHTML = "About\\ Me/";
+    }
+    function resume() {
+        document.getElementById("cd").innerHTML = "Resume/"
+    }
+    function projects() {
+        document.getElementById("cd").innerHTML = "Projects/"
     }
 </script>
