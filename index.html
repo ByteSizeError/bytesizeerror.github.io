@@ -15,23 +15,24 @@
             <span></span>
 
             <ul id="menu">
-                <a href="#"><li>About Me</li></a>
-                <a href="#"><li>Resume</li></a>
-                <a href="#"><li>Projects</li></a>
-
+                <a href="index.html"><li>Home</li></a>
+                <a href="aboutMe.html"><li>About Me</li></a>
+                <a href="resumeJimmyZheng.pdf" target="_blank"><li>Resume</li></a>
+                <a href="projects.html"><li>Projects</li></a>
+                <a href="#"><li>Contacts</li></a>
             </ul>
         </div>
     </nav>
     <!-- <script scr="typeWriter.js"></script> -->
-    <p id="intro"></p>
+    <p style="color:rgb(255, 7, 58)" id="intro"></p>
     <p></p>
-    <p>Last login: <span id="datetime"></span></p>
+    <p style="color:rgb(65, 255, 0)">Last login: <span id="datetime"></span></p>
 
-    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color:royalblue">~/home</span><span style="color:yellow">$ ls</span></p>
-    <p><a href="aboutMe.html" style="color:royalblue" onmouseover="aboutMe()">About Me/</a></p>
+    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ ls</span></p>
+    <p><a href="aboutMe.html" style="color:rgb(70, 102, 255)" onmouseover="aboutMe()">About Me/</a></p>
     <p><a href="resumeJimmyZheng.pdf" target="_blank"  onmouseover="resume()">Resume.pdf</a></p>
-    <p><a href="projects.html" style="color:royalblue" onmouseover="projects()">Projects/</a></p>
-    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color:royalblue">~/home</span><span style="color:yellow">$ cd</span> <span style="color:rgb(255, 255, 255)" id="cd"></span></p>
+    <p><a href="projects.html" style="color:rgb(70, 102, 255)" onmouseover="projects()">Projects/</a></p>
+    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color:rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)" id="cmd"></span></p>
 </body>
 
 </html>
@@ -42,7 +43,7 @@
 
     var i = 0;
     var intro = "Hello, my name is Jimmy! Welcome to my website click on the links below to learn more about me. Thank you! :)";
-    var speed = 50; 
+    var speed = 25; 
 
     function typeWriter() {
         if (i < intro.length) {
@@ -53,12 +54,12 @@
     }
 
     function aboutMe() {
-        document.getElementById("cd").innerHTML = "About\\ Me/";
+        document.getElementById("cmd").innerHTML = "cd About\\ Me/";
     }
     function resume() {
-        document.getElementById("cd").innerHTML = "Resume/"
+        document.getElementById("cmd").innerHTML = "cat Resume.pdf"
     }
     function projects() {
-        document.getElementById("cd").innerHTML = "Projects/"
+        document.getElementById("cmd").innerHTML = "cd Projects/"
     }
 </script>
