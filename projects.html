@@ -3,8 +3,10 @@
 
 <head>
     <meta charset='UTF-8' />
-    <title>Jimmy Zheng</title>
+    <title>Projects</title>
     <link rel='stylesheet' href='main.css'>
+    <script src="https://kit.fontawesome.com/999e1764e7.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body onload="typeWriter();">
@@ -28,14 +30,19 @@
     <p style="color:rgb(255, 7, 58)" id="intro"></p>
 
     <p style="color:rgb(65, 255, 0)">Last login: <span id="datetime"></span></p>
-    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ cd </span><span>Projects/</span></p>
-    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home/Projects</span><span style="color:yellow">$ ls</span></p>
-    <p><a href="https://github.com/p10dibb/TeamMicrosoft423" target="_blank" style="color:rgb(70, 102, 255)" onmouseover="microsoft()">Microsoft's DCCD Project/</a></p>
-    <p><a href="https://github.com/wsu-cpts489-fa20/bp-weather" target="_blank" style="color:rgb(70, 102, 255)" onmouseover="weather()">Weather Book/</a></p>
-    <p><a href="" target="_blank" style="color:rgb(70, 102, 255)" onmouseover="yelp()">Yelp Recommendation App/</a></p>
-    <p><a href="" target="_blank" onmouseover="mtx()">MTX_OS.txt</a></p>
-    <p><a href="" target="_blank" style="color:rgb(70, 102, 255)" onmouseover="bucket()">BucketList App/</a></p>
+    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span>cd Projects/</span></p>
+    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home/Projects</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)">ls</span></p>
+    <p><a onclick="microsoftClick()" style="color:rgb(70, 102, 255)" onmouseover="microsoft()"><i class="fab fa-microsoft"></i> Microsoft's DCCD Project/</a></p>
+    <p><a onclick="weatherClick()" style="color:rgb(70, 102, 255)" onmouseover="weather()"><i class="fas fa-cloud-sun-rain"></i> WeatherBook/</a></p>
+    <p><a onclick="yelpClick()" style="color:rgb(70, 102, 255)" onmouseover="yelp()"><i class="fab fa-yelp"></i> Yelp Recommendation App/</a></p>
+    <p><a onclick="mtxClick()" onmouseover="mtx()"><i class="fas fa-hdd"></i> MTX_OS.txt</a></p>
+    <p><a onclick="bucketClick()" onmouseover="bucket()"><i class="fas fa-tasks"></i> BucketList_App.txt</a></p>
+    <p><a onclick="rpgClick()" onmouseover="rpg()"><i class="fas fa-shield-alt"></i> RPG_Life_Manager.txt</a></p>
+    <p><a onclick="logicClick()" onmouseover="logic()"><i class="fas fa-sign-out-alt"></i> Logic_Escapist.txt</a></p>
+    <p><a onclick="aiClick()" onmouseover="ai()"><i class="fas fa-robot"></i> Artificial_Intelligence_in_Wumpus_World.txt</a></p>
+
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home/Projects</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)" id="cmd"></span></p>
+    <p><span id="project"></span></p>
 
 
 </body>
@@ -47,7 +54,7 @@
     document.getElementById("datetime").innerHTML = date.toLocaleString();
 
     var i = 0;
-    var intro = "Welcome to the projects page here I would give bried explanation of each project.";
+    var intro = "Welcome to the projects page, where I would give a brief explanation of each project.";
     var speed = 25; 
 
     function typeWriter() {
@@ -60,16 +67,87 @@
     function microsoft() {
         document.getElementById("cmd").innerHTML = "cd Microsoft's DCCD Project/"
     }
+    function microsoftClick() {
+        document.getElementById("project").innerHTML = "Microsoft's DCCD Project"
+                                                    + "<br>— JavaScript, HTML, CSS, PostgreSQL, GitHub, Node.js, npm" 
+                                                    + "<br>● Streamlined the charitable giving team's workflow by keeping track of applications and ease of modifying their budget for each region."
+                                                    + "<br>● Automated a system for the 400+ organizations they are working with."
+                                                    + "<br>● Ensured security by using hashed passwords and page restrictions."
+                                                    + "<br>● Placed 3rd for Computer Science Senior Design Competition."
+                                                    + '<br><a style="color:yellow" href="https://github.com/p10dibb/TeamMicrosoft423" target="_blank"><i class="fab fa-github"></i> Check it out on GitHub! (Private)</a>'
+    }
     function weather() {
         document.getElementById("cmd").innerHTML = "cd WeatherBook/"
+    }
+    function weatherClick() {
+        document.getElementById("project").innerHTML = "WeatherBook"
+                                                    + "<br>— JavaScript, HTML, CSS, MongoDB, AWS, GitHub, React, Express.js" 
+                                                    + "<br>● Developed an app with a modern UI that can view conditions at specific locations as well as saving them to a journal for future reference."
+                                                    + "<br>● Led a team of 5 overseeing the creation of this web app."
+                                                    + "<br>● Delegated work evenly by each team member’s knowledge"
+                                                    + "<br>● Assured each of our scrum sprints was on schedule."
+                                                    + '<br><a style="color:yellow" href="https://github.com/wsu-cpts489-fa20/bp-weather" target="_blank"><i class="fab fa-github"></i> Check it out on GitHub!</a>'
     }
     function yelp() {
         document.getElementById("cmd").innerHTML = "cd Yelp Recommendation App/"
     }
+
+    function yelpClick() {
+        document.getElementById("project").innerHTML = "Yelp Recommendation App"
+                                                    + "<br>— Python, AWS, PySpark, PostgreSQL" 
+                                                    + "<br>● Refined 12 gigabytes of Yelp data consisting of over 2 million users to recommendations of businesses and friends under 20 seconds."
+                                                    + "<br>● Applied user-based collaborative filtering for the recommendation."
+                                                    + '<br><a style="color:yellow" href="https://github.com/p10dibb/415-project" target="_blank"><i class="fab fa-github"></i> Check it out on GitHub!</a>'
+    }
+
+
     function mtx() {
         document.getElementById("cmd").innerHTML = "cat MTX_OS.txt"
     }
+    function mtxClick() {
+        document.getElementById("project").innerText = "MTX OS"
+                                                    + "\n— C, Assembly, Ubuntu" 
+                                                    + "\n● Assembled an operating system that has support for the EXT2 filesystem and is 100% compatible with Linux OS."
+                                                    + "\n● Able to read, write and modify files as well as create and delete folders."
+                                                    + "\n● Can handle multiple logins and support the majority of UNIX syscalls."
+    }
     function bucket() {
-        document.getElementById("cmd").innerHTML = "cd BucketList App/"
+        document.getElementById("cmd").innerHTML = "cat BucketList_App.txt"
+    }
+    function bucketClick() {
+        document.getElementById("project").innerText = "BucketList App"
+                                                    + "\n— Swift, SQLite, PhotoKit" 
+                                                    + "\n● Allows the user to track personal interest: foods, travel, activities, etc."
+                                                    + "\n● Users can likewise create additional sections they want."
+    }
+    function rpg() {
+        document.getElementById("cmd").innerHTML = "cat RPG_Life_Manager.txt"
+    }
+    function rpgClick() {
+        document.getElementById("project").innerHTML = "RPG Life Manager"
+                                                    + "<br>— Android Studio, Java, GitHub" 
+                                                    + "<br>● A fun way for users to track progress on goals in a game-like experience."
+                                                    + "<br>● Cooperated with 3 other people in a time constricted competition."
+                                                    + '<br><a style="color:yellow" href="https://github.com/ZaneZev/WSUHackathon2019" target="_blank"><i class="fab fa-github"></i> Check it out on GitHub!</a>'
+
+    }
+    function logic() {
+        document.getElementById("cmd").innerHTML = "cat Logic_Escapist.txt"
+    }
+    function logicClick() {
+        document.getElementById("project").innerText = "Logic Escapist"
+                                                    + "\n— Unity, C#" 
+                                                    + "\n● Created a 2D platform puzzle game that involves logic gates"
+                                                    + "\n● Worked in a team of 3 each delegated to perform a separate task."
+                                                    + "\n● I was in charge of game design and programming animations."
+                                                }
+    function ai() {
+        document.getElementById("cmd").innerHTML = "cat Artificial_Intelligence_in_Wumpus_World.txt"
+    }
+    function aiClick() {
+        document.getElementById("project").innerText = "Artificial Intelligence in Wumpus World"
+                                                    + "\n— Python, C++" 
+                                                    + "\n● Developed an agent that can solve randomly generated mazes."
+                                                    + "\n● Using A* search the agent can avoid obstacles and safely navigate."
     }
 </script>
