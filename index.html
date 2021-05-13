@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/999e1764e7.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload="typeWriter();">
+<body onload="onLoad()">
     <nav role="navigation">
         <div id="menuToggle">
             <input type="checkbox" />
@@ -17,12 +17,24 @@
             <span></span>
 
             <ul id="menu">
-                <a href="index.html"><li>Home</li></a>
-                <a href="aboutMe.html"><li>About Me</li></a>
-                <a href="resumeJimmyZheng.pdf" target="_blank"><li>Resume</li></a>
-                <a href="projects.html"><li>Projects</li></a>
-                <a href=""><li>Skills</li> </a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="aboutMe.html">
+                    <li>About Me</li>
+                </a>
+                <a href="resumeJimmyZheng.pdf" target="_blank">
+                    <li>Resume</li>
+                </a>
+                <a href="projects.html">
+                    <li>Projects</li>
+                </a>
+                <a href="">
+                    <li>Skills</li>
+                </a>
             </ul>
+        </div>
+        <div class="title" id="myName">
         </div>
     </nav>
     <!-- <script scr="typeWriter.js"></script> -->
@@ -30,14 +42,22 @@
     <p></p>
     <p style="color:rgb(65, 255, 0)">Last login: <span id="datetime"></span></p>
 
-    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)">ls</span></p>
-    <p><a href="aboutMe.html" style="color:rgb(70, 102, 255)" onmouseover="aboutMe()"><i class="fas fa-user-graduate"></i> About Me/</a></p>
-    <p><a href="resumeJimmyZheng.pdf" target="_blank"  onmouseover="resume()"><i class="fas fa-file"></i> Resume.pdf</a></p>
-    <p><a href="projects.html" style="color:rgb(70, 102, 255)" onmouseover="projects()"><i class="fas fa-laptop-code"></i> Projects/</a></p>
-    <p><a href="skills.html" style="color:rgb(70, 102, 255)" onmouseover="skills()"><i class="fas fa-star-half-alt"></i> Skills/</a></p>
-    <p><a href="awards.html" style="color:rgb(70, 102, 255)" onmouseover="awards()"><i class="fas fa-award"></i> Awards/</a></p>
-    <p><a href="classes.html" style="color:rgb(70, 102, 255)" onmouseover="classes()"><i class="fas fa-chalkboard-teacher"></i> Classes/</a></p>
-    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color:rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)" id="cmd"></span></p>
+    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span
+            style="color: rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span
+            style="color:rgb(255, 255, 255)">ls</span></p>
+    <p><a href="aboutMe.html" style="color:rgb(70, 102, 255)" onmouseover="aboutMe()" onmouseout="clearCmd();"><i
+                class="fas fa-user-graduate"></i> About Me/</a></p>
+    <p><a href="resumeJimmyZheng.pdf" target="_blank" onmouseover="resume()" onmouseout="clearCmd();"><i class="fas fa-file"></i> Resume.pdf</a></p>
+    <p><a href="projects.html" style="color:rgb(70, 102, 255)" onmouseover="projects()" onmouseout="clearCmd();"><i class="fas fa-laptop-code"></i> Projects/</a></p>
+    <p><a href="skills.html" style="color:rgb(70, 102, 255)" onmouseover="skills()" onmouseout="clearCmd();"><i class="fas fa-star-half-alt"></i>
+            Skills/</a></p>
+    <p><a href="awards.html" style="color:rgb(70, 102, 255)" onmouseover="awards()" onmouseout="clearCmd();"><i class="fas fa-award"></i>
+            Awards/</a></p>
+    <p><a href="classes.html" style="color:rgb(70, 102, 255)" onmouseover="classes()" onmouseout="clearCmd();"><i
+                class="fas fa-chalkboard-teacher"></i> Classes/</a></p>
+    <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span
+            style="color:rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span
+            style="color:rgb(255, 255, 255)" id="cmd"></span></p>
 </body>
 
 </html>
@@ -48,23 +68,81 @@
 
     var i = 0;
     var intro = "Hello, my name is Jimmy Zheng! Welcome to my website; start by clicking on the links below to learn more about me. Thank you! :)";
-    var speed = 25; 
 
-    function typeWriter() {
-        if (i < intro.length) {
-            document.getElementById("intro").innerHTML += intro.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
+    var nameCount = 0;
+    var name = "Jimmy Zheng"
+
+    function sleep(ms) {
+        return new Promise(
+            resolve => setTimeout(resolve, ms)
+        );
+    }
+
+    async function onLoad() {
+        nameWriter();
+        await sleep(1000);
+        typeWriter();
+    }
+
+    async function nameWriter() {
+        while (nameCount < name.length) {
+            document.getElementById("myName").innerHTML += name.charAt(nameCount);
+            nameCount++;
+            await sleep(80);
         }
     }
 
+    async function typeWriter() {
+        while (i < intro.length) {
+            document.getElementById("intro").innerHTML += intro.charAt(i);
+            i++;
+            await sleep(30);
+        }
+    }
+
+    function clearCmd() {
+        document.getElementById("cmd").innerHTML = "";
+    }
+
+    async function cmdWriter(text, count) {
+        while (count < text.length) {
+            document.getElementById("cmd").innerHTML += text.charAt(count);
+            count++;
+            await sleep(20);
+        }
+        document.getElementById("cmd").innerHTML = text;
+    }
+
+    var cmdCount = 0;
+    var aboutText = "cd About\\ Me/";
+    var resumeText = "cat Resume.pdf";
+    var projectsText = "cd Projects/";
+    var skillsText = "cd Skills/";
+    var awardsText = "cd Awards/";
+    var classesText = "cd Classes/";
+    
     function aboutMe() {
-        document.getElementById("cmd").innerHTML = "cd About\\ Me/";
+        cmdCount = 0;
+        cmdWriter(aboutText, cmdCount);
     }
     function resume() {
-        document.getElementById("cmd").innerHTML = "cat Resume.pdf"
+        cmdCount = 0;
+        cmdWriter(resumeText, cmdCount);
     }
     function projects() {
-        document.getElementById("cmd").innerHTML = "cd Projects/"
+        cmdCount = 0;
+        cmdWriter(projectsText, cmdCount);
+    }
+    function skills() {
+        cmdCount = 0;
+        cmdWriter(skillsText, cmdCount);
+    }
+    function awards() {
+        cmdCount = 0;
+        cmdWriter(awardsText, cmdCount);
+    }
+    function classes() {
+        cmdCount = 0;
+        cmdWriter(classesText, cmdCount);
     }
 </script>

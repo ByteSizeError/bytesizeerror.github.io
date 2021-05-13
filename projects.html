@@ -32,14 +32,14 @@
     <p style="color:rgb(65, 255, 0)">Last login: <span id="datetime"></span></p>
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span>cd Projects/</span></p>
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home/Projects</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)">ls</span></p>
-    <p><a onclick="microsoftClick()" style="color:rgb(70, 102, 255)" onmouseover="microsoft()"><i class="fab fa-microsoft"></i> Microsoft's DCCD Project/</a></p>
-    <p><a onclick="weatherClick()" style="color:rgb(70, 102, 255)" onmouseover="weather()"><i class="fas fa-cloud-sun-rain"></i> WeatherBook/</a></p>
-    <p><a onclick="yelpClick()" style="color:rgb(70, 102, 255)" onmouseover="yelp()"><i class="fab fa-yelp"></i> Yelp Recommendation App/</a></p>
-    <p><a onclick="mtxClick()" onmouseover="mtx()"><i class="fas fa-hdd"></i> MTX_OS.txt</a></p>
-    <p><a onclick="bucketClick()" onmouseover="bucket()"><i class="fas fa-tasks"></i> BucketList_App.txt</a></p>
-    <p><a onclick="rpgClick()" onmouseover="rpg()"><i class="fas fa-shield-alt"></i> RPG_Life_Manager.txt</a></p>
-    <p><a onclick="logicClick()" onmouseover="logic()"><i class="fas fa-sign-out-alt"></i> Logic_Escapist.txt</a></p>
-    <p><a onclick="aiClick()" onmouseover="ai()"><i class="fas fa-robot"></i> Artificial_Intelligence_in_Wumpus_World.txt</a></p>
+    <p><a onclick="microsoftClick()" style="color:rgb(70, 102, 255)" onmouseover="microsoft()" onmouseout="clearCmd()"><i class="fab fa-microsoft"></i> Microsoft's DCCD Project/</a></p>
+    <p><a onclick="weatherClick()" style="color:rgb(70, 102, 255)" onmouseover="weather()" onmouseout="clearCmd()"><i class="fas fa-cloud-sun-rain"></i> WeatherBook/</a></p>
+    <p><a onclick="yelpClick()" style="color:rgb(70, 102, 255)" onmouseover="yelp()" onmouseout="clearCmd()"><i class="fab fa-yelp"></i> Yelp Recommendation App/</a></p>
+    <p><a onclick="mtxClick()" onmouseover="mtx()" onmouseout="clearCmd()"><i class="fas fa-hdd"></i> MTX_OS.txt</a></p>
+    <p><a onclick="bucketClick()" onmouseover="bucket()" onmouseout="clearCmd()"><i class="fas fa-tasks"></i> BucketList_App.txt</a></p>
+    <p><a onclick="rpgClick()" onmouseover="rpg()" onmouseout="clearCmd()"><i class="fas fa-shield-alt"></i> RPG_Life_Manager.txt</a></p>
+    <p><a onclick="logicClick()" onmouseover="logic()" onmouseout="clearCmd()"><i class="fas fa-sign-out-alt"></i> Logic_Escapist.txt</a></p>
+    <p><a onclick="aiClick()" onmouseover="ai()" onmouseout="clearCmd()"><i class="fas fa-robot"></i> Artificial_Intelligence_in_Wumpus_World.txt</a></p>
 
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home/Projects</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)" id="cmd"></span></p>
     <p><span id="project"></span></p>
@@ -57,6 +57,12 @@
     var intro = "Welcome to the projects page, where I would give a brief explanation of each project.";
     var speed = 25; 
 
+    function sleep(ms) {
+        return new Promise(
+            resolve => setTimeout(resolve, ms)
+        );
+    }
+
     function typeWriter() {
         if (i < intro.length) {
             document.getElementById("intro").innerHTML += intro.charAt(i);
@@ -64,8 +70,34 @@
             setTimeout(typeWriter, speed);
         }
     }
+
+    function clearCmd() {
+        document.getElementById("cmd").innerHTML = "";
+    }
+
+    var cmdCount = 0;
+    var microsoftText = "cd Microsoft's DCCD Project/";
+    var weatherText = "cd WeatherBook/";
+    var yelpText = "cd Yelp Recommendation App/";
+    var mtxText = "cat MTX_OS.txt";
+    var bucketText = "cat BucketList_App.txt";
+    var rpgText = "cat RPG_Life_Manager.txt";
+    var logicText = "cat Logic_Escapist.txt";
+    var aiText = "cat Artificial_Intelligence_in_Wumpus_World.txt";
+
+    async function cmdWriter(text, count) {
+        while (count < text.length) {
+            document.getElementById("cmd").innerHTML += text.charAt(count);
+            count++;
+            await sleep(20);
+        }
+        document.getElementById("cmd").innerHTML = text;
+    }
+
+
     function microsoft() {
-        document.getElementById("cmd").innerHTML = "cd Microsoft's DCCD Project/"
+        cmdCount = 0;
+        cmdWriter(microsoftText, cmdCount);
     }
     function microsoftClick() {
         document.getElementById("project").innerHTML = "Microsoft's DCCD Project"
@@ -77,7 +109,9 @@
                                                     + '<br><a style="color:yellow" href="https://github.com/p10dibb/TeamMicrosoft423" target="_blank"><i class="fab fa-github"></i> Check it out on GitHub! (Private)</a>'
     }
     function weather() {
-        document.getElementById("cmd").innerHTML = "cd WeatherBook/"
+        cmdCount = 0;
+        cmdWriter(weatherText, cmdCount);
+
     }
     function weatherClick() {
         document.getElementById("project").innerHTML = "WeatherBook"
@@ -89,7 +123,8 @@
                                                     + '<br><a style="color:yellow" href="https://github.com/wsu-cpts489-fa20/bp-weather" target="_blank"><i class="fab fa-github"></i> Check it out on GitHub!</a>'
     }
     function yelp() {
-        document.getElementById("cmd").innerHTML = "cd Yelp Recommendation App/"
+        cmdCount = 0;
+        cmdWriter(yelpText, cmdCount);
     }
 
     function yelpClick() {
@@ -102,7 +137,8 @@
 
 
     function mtx() {
-        document.getElementById("cmd").innerHTML = "cat MTX_OS.txt"
+        cmdCount = 0;
+        cmdWriter(mtxText, cmdCount);
     }
     function mtxClick() {
         document.getElementById("project").innerText = "MTX OS"
@@ -112,7 +148,8 @@
                                                     + "\n● Can handle multiple logins and support the majority of UNIX syscalls."
     }
     function bucket() {
-        document.getElementById("cmd").innerHTML = "cat BucketList_App.txt"
+        cmdCount = 0;
+        cmdWriter(bucketText, cmdCount);
     }
     function bucketClick() {
         document.getElementById("project").innerText = "BucketList App"
@@ -121,7 +158,8 @@
                                                     + "\n● Users can likewise create additional sections they want."
     }
     function rpg() {
-        document.getElementById("cmd").innerHTML = "cat RPG_Life_Manager.txt"
+        cmdCount = 0;
+        cmdWriter(rpgText, cmdCount);
     }
     function rpgClick() {
         document.getElementById("project").innerHTML = "RPG Life Manager"
@@ -132,7 +170,8 @@
 
     }
     function logic() {
-        document.getElementById("cmd").innerHTML = "cat Logic_Escapist.txt"
+        cmdCount = 0;
+        cmdWriter(logicText, cmdCount);
     }
     function logicClick() {
         document.getElementById("project").innerText = "Logic Escapist"
@@ -142,7 +181,8 @@
                                                     + "\n● I was in charge of game design and programming animations."
                                                 }
     function ai() {
-        document.getElementById("cmd").innerHTML = "cat Artificial_Intelligence_in_Wumpus_World.txt"
+        cmdCount = 0;
+        cmdWriter(aiText, cmdCount);
     }
     function aiClick() {
         document.getElementById("project").innerText = "Artificial Intelligence in Wumpus World"
