@@ -1,12 +1,199 @@
 <!DOCTYPE html>
 <html>
+<meta charset='UTF-8' />
+<title>Projects</title>
+<link rel='stylesheet' href='main.css'>
+<script src="https://kit.fontawesome.com/999e1764e7.js" crossorigin="anonymous"></script>
+
 
 <head>
 
 </head>
 
 <body>
-under constuction :)
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="index.html"><li>Home</li></a>
+                <a href="aboutMe.html"><li>About Me</li></a>
+                <a href="resumeJimmyZheng.pdf" target="_blank"><li>Resume</li></a>
+                <a href="projects.html"><li>Projects</li></a>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="searchTable">
+        <input type="text" id="myInput" onkeyup="search()" placeholder="Search for skills..">
+
+        <table id="myTable">
+            <tr class="header">
+                <th onclick="sortTable(0)" style="color: rgb(30, 30, 30); width:65%">Skill <i class="fas fa-sort"></i></th>
+                <th onclick="sortTable(1)" style="color: rgb(30, 30, 30); width:35%; text-align: right;">Experience <i class="fas fa-sort"></i></th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>C++/C</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>Swift</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>Git</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>AWS</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>YAML</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>PostgreSQL</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>Node.js</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>npm</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>MongoDB</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>Express.js</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>jQuery</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="far fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>Agile Scrum Methodology</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+    
+        </table>
+    
+    </div>
+
 </body>
 
 </html>
+
+<script>
+    function search() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchCount = 0;
+        table = document.getElementById("myTable");
+        switching = true;
+        dir = "asc";
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                if (dir == "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchCount++;
+            } else {
+                if (switchCount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
