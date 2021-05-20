@@ -18,11 +18,22 @@
             <span></span>
 
             <ul id="menu">
-                <a href="index.html"><li>Home</li></a>
-                <a href="aboutMe.html"><li>About Me</li></a>
-                <a href="resumeJimmyZheng.pdf" target="_blank"><li>Resume</li></a>
-                <a href="projects.html"><li>Projects</li></a>
-
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="aboutMe.html">
+                    <li>About Me</li>
+                </a>
+                <!-- <a href="resumeJimmyZheng.pdf" target="_blank"> -->
+                <a onclick="window.open('resumeJimmyZheng.pdf','popUpWindow','height=550,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
+                    <li>Resume</li>
+                </a>
+                <a href="projects.html">
+                    <li>Projects</li>
+                </a>
+                <a href="skills.html">
+                    <li>Skills</li>
+                </a>
             </ul>
         </div>
     </nav>
@@ -32,14 +43,42 @@
     <p style="color:rgb(65, 255, 0)">Last login: <span id="datetime"></span></p>
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span>cd Projects/</span></p>
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home/Projects</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)">ls</span></p>
-    <p><a onclick="microsoftClick()" style="color:rgb(70, 102, 255)" onmouseover="microsoft()" onmouseout="clearCmd()"><i class="fab fa-microsoft"></i> Microsoft's DCCD Project/</a></p>
-    <p><a onclick="weatherClick()" style="color:rgb(70, 102, 255)" onmouseover="weather()" onmouseout="clearCmd()"><i class="fas fa-cloud-sun-rain"></i> WeatherBook/</a></p>
-    <p><a onclick="yelpClick()" style="color:rgb(70, 102, 255)" onmouseover="yelp()" onmouseout="clearCmd()"><i class="fab fa-yelp"></i> Yelp Recommendation App/</a></p>
-    <p><a onclick="mtxClick()" onmouseover="mtx()" onmouseout="clearCmd()"><i class="fas fa-hdd"></i> MTX_OS.txt</a></p>
-    <p><a onclick="bucketClick()" onmouseover="bucket()" onmouseout="clearCmd()"><i class="fas fa-tasks"></i> BucketList_App.txt</a></p>
-    <p><a onclick="rpgClick()" onmouseover="rpg()" onmouseout="clearCmd()"><i class="fas fa-shield-alt"></i> RPG_Life_Manager.txt</a></p>
-    <p><a onclick="logicClick()" onmouseover="logic()" onmouseout="clearCmd()"><i class="fas fa-sign-out-alt"></i> Logic_Escapist.txt</a></p>
-    <p><a onclick="aiClick()" onmouseover="ai()" onmouseout="clearCmd()"><i class="fas fa-robot"></i> Artificial_Intelligence_in_Wumpus_World.txt</a></p>
+    <div class="row">
+        <div class="column">
+            
+        </div>        
+        <div class="column">
+            <p><a onclick="microsoftClick()" style="color:rgb(70, 102, 255)" onmouseover="microsoft()" onmouseout="clearCmd()"><i class="fab fa-microsoft"></i> Microsoft's DCCD Project/</a></p>
+
+        </div>
+        <div class="column">
+            <p><a onclick="weatherClick()" style="color:rgb(70, 102, 255)" onmouseover="weather()" onmouseout="clearCmd()"><i class="fas fa-cloud-sun-rain"></i> WeatherBook/</a></p>
+
+        </div>
+        <div class="column">
+            <p><a onclick="yelpClick()" style="color:rgb(70, 102, 255)" onmouseover="yelp()" onmouseout="clearCmd()"><i class="fab fa-yelp"></i> Yelp Recommendation App/</a></p>
+
+        </div>
+        <div class="column">
+            <p><a onclick="mtxClick()" onmouseover="mtx()" onmouseout="clearCmd()"><i class="fas fa-hdd"></i> MTX_OS.txt</a></p>
+        </div>
+        <div class="column">
+            <p><a onclick="bucketClick()" onmouseover="bucket()" onmouseout="clearCmd()"><i class="fas fa-tasks"></i> BucketList_App.txt</a></p>
+
+        </div>
+        <div class="column">
+            <p><a onclick="rpgClick()" style="color:rgb(70, 102, 255)" onmouseover="rpg()" onmouseout="clearCmd()"><i class="fas fa-shield-alt"></i> RPG Life Manager/</a></p>
+
+        </div>
+        <div class="column">
+            <p><a onclick="logicClick()" onmouseover="logic()" onmouseout="clearCmd()"><i class="fas fa-sign-out-alt"></i> Logic_Escapist.txt</a></p>
+
+        </div>
+        <div class="column">
+            <p><a onclick="aiClick()" onmouseover="ai()" onmouseout="clearCmd()"><i class="fas fa-robot"></i> AI_in_Wumpus_World.txt</a></p>
+        </div>
+        
+    </div>
 
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span style="color: rgb(70, 102, 255)">~/Home/Projects</span><span style="color:yellow">$ </span><span style="color:rgb(255, 255, 255)" id="cmd"></span></p>
     <p><span id="project"></span></p>
@@ -81,7 +120,7 @@
     var yelpText = "cd Yelp Recommendation App/";
     var mtxText = "cat MTX_OS.txt";
     var bucketText = "cat BucketList_App.txt";
-    var rpgText = "cat RPG_Life_Manager.txt";
+    var rpgText = "cd RPG_Life_Manager.txt";
     var logicText = "cat Logic_Escapist.txt";
     var aiText = "cat Artificial_Intelligence_in_Wumpus_World.txt";
 

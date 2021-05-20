@@ -19,24 +19,35 @@
             <span></span>
 
             <ul id="menu">
-                <a href="index.html"><li>Home</li></a>
-                <a href="aboutMe.html"><li>About Me</li></a>
-                <a href="resumeJimmyZheng.pdf" target="_blank"><li>Resume</li></a>
-                <a href="projects.html"><li>Projects</li></a>
-
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="aboutMe.html">
+                    <li>About Me</li>
+                </a>
+                <!-- <a href="resumeJimmyZheng.pdf" target="_blank"> -->
+                <a onclick="window.open('resumeJimmyZheng.pdf','popUpWindow','height=550,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
+                    <li>Resume</li>
+                </a>
+                <a href="projects.html">
+                    <li>Projects</li>
+                </a>
+                <a href="skills.html">
+                    <li>Skills</li>
+                </a>
             </ul>
         </div>
     </nav>
     <div id="searchTable">
-        <input type="text" id="myInput" onkeyup="search()" placeholder="Search for skills..">
+        <input type="text" id="skillsInput" onkeyup="search()" placeholder="Search for skills..">
 
-        <table id="myTable">
+        <table id="skillsTable">
             <tr class="header">
                 <th onclick="sortTable(0)" style="color: rgb(30, 30, 30); width:65%">Skill <i class="fas fa-sort"></i></th>
                 <th onclick="sortTable(1)" style="color: rgb(30, 30, 30); width:35%; text-align: right;">Experience <i class="fas fa-sort"></i></th>
             </tr>
             <tr>
-                <td>Python</td>
+                <td><i class="fab fa-python"></i> Python</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
@@ -46,37 +57,37 @@
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>Java</td>
+                <td><i class="fab fa-java"></i> Java</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="far fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>Swift</td>
+                <td><i class="fab fa-swift"></i> Swift</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>HTML</td>
+                <td><i class="fab fa-html5"></i> HTML</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>CSS</td>
+                <td><i class="fab fa-css3-alt"></i> CSS</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>JavaScript</td>
+                <td><i class="fab fa-js-square"></i> JavaScript</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>Git</td>
+                <td><i class="fab fa-git-square"></i> Git</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>AWS</td>
+                <td><i class="fab fa-aws"></i> AWS</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
@@ -88,30 +99,30 @@
             <tr>
                 <td>PostgreSQL</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="far fa-star"></i><i class="far fa-star"></i></td>
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>React</td>
+                <td><i class="fab fa-react"></i> React</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="far fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>Node.js</td>
+                <td><i class="fab fa-node"></i> Node.js</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="far fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>npm</td>
+                <td><i class="fab fa-npm"></i> npm</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="far fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>MongoDB</td>
+                <td><i class="fas fa-leaf"></i> MongoDB</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>Express.js</td>
+                <td><i class="fab fa-node-js"></i> Express.js</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="far fa-star"></i><i class="far fa-star"></i></td>
             </tr>
@@ -121,12 +132,62 @@
                         class="far fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>Bootstrap</td>
+                <td><i class="fab fa-bootstrap"></i> Bootstrap</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="far fa-star"></i><i class="far fa-star"></i></td>
             </tr>
             <tr>
-                <td>Agile Scrum Methodology</td>
+                <td><i class="fas fa-square-root-alt"></i> MatLab</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fab fa-unity"></i> Unity</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>MIPS</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-terminal"></i> C Shell</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-terminal"></i> Unix Shell</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-terminal"></i> Powershell</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-terminal"></i> Terminal</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>SML</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td>PostScript</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="far fa-star"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-users"></i> Agile Scrum Methodology</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="far fa-star"></i></td>
             </tr>
@@ -142,9 +203,9 @@
 <script>
     function search() {
         var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
+        input = document.getElementById("skillsInput");
         filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
+        table = document.getElementById("skillsTable");
         tr = table.getElementsByTagName("tr");
 
         for (i = 0; i < tr.length; i++) {
@@ -162,7 +223,7 @@
 
     function sortTable(n) {
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchCount = 0;
-        table = document.getElementById("myTable");
+        table = document.getElementById("skillsTable");
         switching = true;
         dir = "asc";
         while (switching) {

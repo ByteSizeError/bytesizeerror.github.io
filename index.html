@@ -23,7 +23,8 @@
                 <a href="aboutMe.html">
                     <li>About Me</li>
                 </a>
-                <a href="resumeJimmyZheng.pdf" target="_blank">
+                <!-- <a href="resumeJimmyZheng.pdf" target="_blank"> -->
+                <a onclick="window.open('resumeJimmyZheng.pdf','popUpWindow','height=550,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
                     <li>Resume</li>
                 </a>
                 <a href="projects.html">
@@ -34,8 +35,10 @@
                 </a>
             </ul>
         </div>
-        <div class="title" id="myName">
-        </div>
+        <center>
+            <img src="profilePic.jpeg" alt="Profile Picture" width="200" height="200">
+            <p class="title" id="myName"></p>
+        </center>
     </nav>
     <!-- <script scr="typeWriter.js"></script> -->
     <p style="color:rgb(255, 7, 58); font-size: large;" id="intro"></p>
@@ -45,16 +48,45 @@
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span
             style="color: rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span
             style="color:rgb(255, 255, 255)">ls</span></p>
-    <p><a href="aboutMe.html" style="color:rgb(70, 102, 255)" onmouseover="aboutMe()" onmouseout="clearCmd();"><i
+    <div class="row">
+        <div class="column">
+            <p><a href="aboutMe.html" style="color:rgb(70, 102, 255)" onmouseover="aboutMe()" onmouseout="clearCmd();"><i
                 class="fas fa-user-graduate"></i> About Me/</a></p>
-    <p><a href="resumeJimmyZheng.pdf" target="_blank" onmouseover="resume()" onmouseout="clearCmd();"><i class="fas fa-file"></i> Resume.pdf</a></p>
-    <p><a href="projects.html" style="color:rgb(70, 102, 255)" onmouseover="projects()" onmouseout="clearCmd();"><i class="fas fa-laptop-code"></i> Projects/</a></p>
-    <p><a href="skills.html" style="color:rgb(70, 102, 255)" onmouseover="skills()" onmouseout="clearCmd();"><i class="fas fa-star-half-alt"></i>
-            Skills/</a></p>
-    <p><a href="awards.html" style="color:rgb(70, 102, 255)" onmouseover="awards()" onmouseout="clearCmd();"><i class="fas fa-award"></i>
-            Awards/</a></p>
-    <p><a href="classes.html" style="color:rgb(70, 102, 255)" onmouseover="classes()" onmouseout="clearCmd();"><i
+        </div>
+        <div class="column">
+            <!-- <p><a href="resumeJimmyZheng.pdf" target="_blank" onmouseover="resume()" onmouseout="clearCmd();"><i class="fas fa-file"></i> Resume.pdf</a></p> -->
+            <p><a onclick="window.open('resumeJimmyZheng.pdf','popUpWindow','height=550,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" target="_blank" onmouseover="resume()" onmouseout="clearCmd();"><i class="fas fa-file"></i> Resume.pdf</a></p>
+
+        </div>
+        <div class="column">
+            <p><a onclick="window.open('https://www.linkedin.com/in/jimmy-zheng/');" target="_blank" onmouseover="linkedIn()" onmouseout="clearCmd();"><i class="fab fa-linkedin"></i> LinkedIn.webloc</a></p>
+
+        </div>
+        <div class="column">
+            <p><a onclick="window.open('https://github.com/ByteSizeError');" target="_blank" onmouseover="gitHub()" onmouseout="clearCmd();"><i class="fab fa-github"></i> GitHub.webloc</a></p>
+
+        </div>
+
+        <div class="column">
+            <p><a href="projects.html" style="color:rgb(70, 102, 255)" onmouseover="projects()" onmouseout="clearCmd();"><i class="fas fa-laptop-code"></i> Projects/</a></p>
+
+        </div>
+        <div class="column">
+            <p><a href="skills.html" style="color:rgb(70, 102, 255)" onmouseover="skills()" onmouseout="clearCmd();"><i class="fas fa-star-half-alt"></i>
+                Skills/</a></p>
+    
+        </div>
+        <div class="column">
+            <p><a href="awards.html" style="color:rgb(70, 102, 255)" onmouseover="awards()" onmouseout="clearCmd();"><i class="fas fa-award"></i>
+                Awards/</a></p>
+    
+        </div>
+        <div class="column">
+            <p><a href="classes.html" style="color:rgb(70, 102, 255)" onmouseover="classes()" onmouseout="clearCmd();"><i
                 class="fas fa-chalkboard-teacher"></i> Classes/</a></p>
+
+        </div>
+    </div>
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span
             style="color:rgb(70, 102, 255)">~/Home</span><span style="color:yellow">$ </span><span
             style="color:rgb(255, 255, 255)" id="cmd"></span></p>
@@ -115,7 +147,9 @@
 
     var cmdCount = 0;
     var aboutText = "cd About\\ Me/";
-    var resumeText = "cat Resume.pdf";
+    var resumeText = "open Resume.pdf";
+    var linkedInText = "open LinkedIn.webloc";
+    var gitHubText = "open GitHub.webloc";
     var projectsText = "cd Projects/";
     var skillsText = "cd Skills/";
     var awardsText = "cd Awards/";
@@ -129,6 +163,16 @@
         cmdCount = 0;
         cmdWriter(resumeText, cmdCount);
     }
+    function linkedIn() {
+        cmdCount = 0;
+        cmdWriter(linkedInText, cmdCount);
+    }
+
+    function gitHub() {
+        cmdCount = 0;
+        cmdWriter(gitHubText, cmdCount);
+    }
+
     function projects() {
         cmdCount = 0;
         cmdWriter(projectsText, cmdCount);

@@ -12,7 +12,7 @@ body{
     padding: 0;
     background-color: rgb(26, 26, 26);
     color:rgb(255, 255, 255);
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Courier New", monospace;
     font-size: large;
 }
 
@@ -152,7 +152,7 @@ a:active{
     box-sizing: border-box;
 }
 
-#myInput {
+#skillsInput, #classesInput {
     width: 100%;
     font-size: large;
     padding: 12px 12px 12px 12px;
@@ -161,34 +161,68 @@ a:active{
     border: 1px solid #ddd; 
 }
   
-#myTable {
+#skillsTable, #classesTable {
     border-collapse: collapse; 
     width: 100%; 
     border: 1px solid #ddd; 
     font-size: large;
 }
   
-#myTable th, #myTable td {
+#skillsTable th, #skillsTable td, #classesTable th, #classesTable td  {
     text-align: left;
     padding: 12px;
 }
   
-#myTable tr {
+#skillsTable tr, #classesTable tr {
     border-bottom: 1px solid #ddd;
 }
   
-#myTable tr.header, #myTable tr.header:hover  {
+#skillsTable tr.header, #skillsTable tr.header:hover, #classesTable tr.header, #classesTable tr.header:hover  {
     background-color: #f1f1f1;
 }
 
-#myTable tr:hover {
+#skillsTable tr:hover, #classesTable tr:hover {
     background-color: rgb(50, 50, 50);
 }
 
-#myTable th {
+#skillsTable th, #classesTable th {
     cursor: pointer;
 }
 
-#myTable td:nth-child(2) {
+#skillsTable td:nth-child(2), #classesTable td:nth-child(3){
     text-align: right;
+}
+
+.column {
+    float: left;
+}
+
+.row {
+    width: 100%;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    .column {
+        width: 30%;
+    }
+}@media screen and (min-width: 1200px) {
+    .column {
+        width: 25%;
+    }
+}
+img {
+    border-radius: 50%;
 }

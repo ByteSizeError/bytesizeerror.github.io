@@ -1,1 +1,295 @@
-under construction
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8' />
+<title>Projects</title>
+<link rel='stylesheet' href='main.css'>
+<script src="https://kit.fontawesome.com/999e1764e7.js" crossorigin="anonymous"></script>
+
+
+<head>
+
+</head>
+
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="aboutMe.html">
+                    <li>About Me</li>
+                </a>
+                <!-- <a href="resumeJimmyZheng.pdf" target="_blank"> -->
+                <a onclick="window.open('resumeJimmyZheng.pdf','popUpWindow','height=550,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
+                    <li>Resume</li>
+                </a>
+                <a href="projects.html">
+                    <li>Projects</li>
+                </a>
+                <a href="skills.html">
+                    <li>Skills</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <div id="searchTable">
+        <input type="text" id="classesInput" onkeyup="search()" placeholder="Search for classes..">
+
+        <table id="classesTable">
+            <tr class="header">
+                <th onclick="sortTable(0)" style="color: rgb(30, 30, 30); width:20%">Code <i class="fas fa-sort"></i></th>
+                <th onclick="sortTable(1)" style="color: rgb(30, 30, 30); width:60%">Class <i class="fas fa-sort"></i></th>
+                <th onclick="sortTable(2)" style="color: rgb(30, 30, 30); width:20%; text-align: right;">Grade <i class="fas fa-sort"></i></th>
+
+            </tr>
+            <!-- 2017 Fall -->
+            <tr>
+                <td>CPT_S 121</td>
+                <td>Program Design and Development C/C++</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>ENGR 101</td>
+                <td>Success in Engineering Study</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>ENGR 107</td>
+                <td>Introductory Mathematics for Engineering Applications</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>MATH 171</td>
+                <td>Calculus I</td>
+                <td>A-</td>
+            </tr>
+            <!-- 2018 Spring -->
+            <tr>
+                <td>CPT_S 122</td>
+                <td>Data Structures C/C++</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>MATH 172</td>
+                <td>Calculus II</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>PHYSICS 201</td>
+                <td>Physics for Scientists and Engineers I</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>SDC 100</td>
+                <td>World of Design and Construction</td>
+                <td>A</td>
+            </tr>
+            <!-- 2018 Fall -->
+            <tr>
+                <td>CPT_S 223</td>
+                <td>Advanced Data Structures C/C++</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>MATH 216</td>
+                <td>Discrete Structures</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>MATH 273</td>
+                <td>Calculus III</td>
+                <td>A-</td>
+            </tr>
+            <tr>
+                <td>PHIL 201</td>
+                <td>Introduction to Formal Logic</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>PHYSICS 202</td>
+                <td>Physics for Scientists and Engineers II</td>
+                <td>A-</td>
+            </tr>
+            <!-- 2019 Spring -->
+            <tr>
+                <td>CPT_S 260</td>
+                <td>Introduction to Computer Architecture</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CPT_S 317</td>
+                <td>Automata and Formal Languages</td>
+                <td>A-</td>
+            </tr>
+            <tr>
+                <td>CPT_S 355</td>
+                <td>Programming Language Design</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>MATH 220</td>
+                <td>Introductory Linear Algebra</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>STAT 360</td>
+                <td>Probability and Statistics</td>
+                <td>A-</td>
+            </tr>
+            <!-- 2019 Summer -->
+            <tr>
+                <td>ENGLISH 402</td>
+                <td>Technical and Professional Writing</td>
+                <td>A</td>
+            </tr>
+            <!-- 2019 Fall -->
+            <tr>
+                <td>CPT_S 302</td>
+                <td>Professional Skills in Computing and Engineering</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CPT_S 322</td>
+                <td>Software Engineering Principles I</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>CPT_S 350</td>
+                <td>Design and Analysis of Algorithms</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CPT_S 360</td>
+                <td>Systems Programming C/C++</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>CPT_S 453</td>
+                <td>Graph Theory</td>
+                <td>A-</td>
+            </tr>
+            <!-- 2020 Spring -->
+            <tr>
+                <td>CPT_S 421</td>
+                <td>Software Design Project I</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CPT_S 451</td>
+                <td>Introduction to Database Systems</td>
+                <td>B-</td>
+            </tr>
+            <tr>
+                <td>CPT_S 460</td>
+                <td>Operating Systems and Computer Architecture</td>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>CPT_S 479</td>
+                <td>Mobile Application Development</td>
+                <td>A-</td>
+            </tr>
+            <tr>
+                <td>MATH 315</td>
+                <td>Differential Equations</td>
+                <td>P</td>
+            </tr>
+            <!-- 2020 Fall -->
+            <tr>
+                <td>CPT_S 415</td>
+                <td>Big Data</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CPT_S 423</td>
+                <td>Software Design Project II</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CPT_S 440</td>
+                <td>Artificial Intelligence</td>
+                <td>B-</td>
+            </tr>
+            <tr>
+                <td>CPT_S 455</td>
+                <td>Introduction to Computer Networks</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CPT_S 489</td>
+                <td>Web Development</td>
+                <td>A</td>
+            </tr>
+        </table>
+    
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function search() {
+        var input, filter, table, tr, td, td2, i, txtValue;
+        input = document.getElementById("classesInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("classesTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            td2 = tr[i].getElementsByTagName("td")[0];
+            if (td || td2) {
+                txtValue = td.textContent + td2.textContent || td.innerText + td2.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchCount = 0;
+        table = document.getElementById("classesTable");
+        switching = true;
+        dir = "asc";
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                if (dir == "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchCount++;
+            } else {
+                if (switchCount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
