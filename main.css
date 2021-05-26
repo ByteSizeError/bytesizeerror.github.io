@@ -59,7 +59,8 @@ a:active{
 
 #menuToggle a:hover
 {
-    color: tomato;
+    color:royalblue;
+    text-decoration: underline;
 }
 
 #menuToggle input
@@ -83,7 +84,7 @@ a:active{
     margin-bottom: 5px;
     position: relative;
     
-    background: #cdcdcd;
+    background: rgb(255, 255, 255);
     border-radius: 3px;
     
     z-index: 1;
@@ -109,7 +110,7 @@ a:active{
 {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
+    background: rgb(30, 30, 30);
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3)
@@ -128,7 +129,7 @@ a:active{
     position: absolute;
     width: 200px;
     margin: -100px 0 0 -50px;
-    padding: 50px;
+    padding: 50px 50px 10px 50px;
     padding-top: 100px;
     background: rgb(255, 255, 255);
     list-style-type: none;
@@ -158,13 +159,13 @@ a:active{
     padding: 12px 12px 12px 12px;
     margin-top: 12px;
     margin-bottom: 12px;
-    border: 1px solid #ddd; 
+    border: 1px solid rgb(255, 255, 255);; 
 }
   
 #skillsTable, #classesTable {
     border-collapse: collapse; 
     width: 100%; 
-    border: 1px solid #ddd; 
+    border: 1px solid rgb(255, 255, 255);; 
     font-size: large;
 }
   
@@ -174,11 +175,11 @@ a:active{
 }
   
 #skillsTable tr, #classesTable tr {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(255, 255, 255);;
 }
   
 #skillsTable tr.header, #skillsTable tr.header:hover, #classesTable tr.header, #classesTable tr.header:hover  {
-    background-color: #f1f1f1;
+    background-color: rgb(255, 255, 255);;
 }
 
 #skillsTable tr:hover, #classesTable tr:hover {
