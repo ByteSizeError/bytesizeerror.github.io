@@ -13,7 +13,7 @@
 </head>
 
 <body onload="onLoad()">
-    <nav role="navigation">
+    <nav role="navigation" class="navbar">
         <div id="menuToggle">
             <input type="checkbox" />
             <span></span>
@@ -50,7 +50,6 @@
 
     <!-- <script scr="typeWriter.js"></script> -->
     <p style="color:rgb(255, 7, 58); font-size: large;" id="intro"></p>
-    <p></p>
     <p style="color:rgb(65, 255, 0)">Last login: <span id="datetime"></span></p>
 
     <p><span style="color:rgb(65, 255, 0)">jimmyzheng@Jimmy's-Website</span><span>:</span><span
@@ -144,7 +143,7 @@
         while (i < intro.length) {
             document.getElementById("intro").innerHTML += intro.charAt(i);
             i++;
-            await sleep(30);
+            await sleep(20);
         }
     }
 
